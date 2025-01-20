@@ -30,7 +30,7 @@ const styles: {
   },
   loginForm: {
     maxWidth: "630px",
-    margin: "auto",
+    marginInline: "auto",
     width: "100%",
     padding: "2rem",
   },

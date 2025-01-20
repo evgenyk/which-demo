@@ -34,8 +34,9 @@ export const generateCSSVariables = (): string => `
   }
 
   [data-kinde-control-label] {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
   }
 
   [data-kinde-control-select-text] { 
@@ -44,6 +45,7 @@ export const generateCSSVariables = (): string => `
 
   [data-kinde-button] {
     height: 44px;
+    width: 220px;
   }
 
 `;
