@@ -1,7 +1,6 @@
 "use server";
 
 import {
-  getKindeNonce,
   getKindeWidget,
   getLogoUrl,
   type KindePageEvent,
