@@ -12,7 +12,7 @@ import Layout from "../../layout";
 
 const styles: {
   container: React.CSSProperties;
-  sidePanel: React.CSSProperties;
+  header: React.CSSProperties;
   loginForm: React.CSSProperties;
   heading: React.CSSProperties;
   description: React.CSSProperties;
@@ -23,10 +23,9 @@ const styles: {
     display: "flex",
     height: "100vh",
   },
-  sidePanel: {
-    borderTopRightRadius: "5rem",
-    backgroundColor: "#3E27B7",
-    flex: 1,
+  header: {
+    borderBottom: "1px solid #ccc",
+    padding: "1rem",
   },
   loginForm: {
     flex: "1 0 auto",
@@ -61,17 +60,8 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
   return (
     <Layout context={context} request={request}>
       <div style={styles.container}>
+        <div style={styles.header}>Which</div>
         <main style={styles.loginForm}>
-          <div>
-            {request.authUrlParams.orgCode && (
-              <img
-                width="72"
-                style={styles.logo}
-                src={getLogoUrl(request.authUrlParams.orgCode)}
-                alt="Organization logo"
-              />
-            )}
-          </div>
           <div style={{ padding: "2rem" }}>
             <h2 style={styles.heading}>{context.widget.content.heading}</h2>
             <p style={styles.description}>
