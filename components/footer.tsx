@@ -126,7 +126,6 @@ const Footer = () => {
         <div style={styles.topSection}>
           <div style={styles.appSection}>
             <div style={styles.appSectionHeader}>
-              <img src="/qrcode.png" alt="QR Code" style={styles.qrCode} />
               <div>
                 <h2 style={styles.heading}>Get the Which? app</h2>
                 <p style={styles.description}>
@@ -136,9 +135,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div style={styles.storeButtons}>
-              <img src="/getapp.png" alt="Get it on Google Play" />
-            </div>
+            <div style={styles.storeButtons}></div>
           </div>
           <div style={styles.problemSection}>
             <h2 style={styles.heading}>Got a problem?</h2>
