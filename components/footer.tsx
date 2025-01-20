@@ -126,6 +126,11 @@ const Footer = () => {
         <div style={styles.topSection}>
           <div style={styles.appSection}>
             <div style={styles.appSectionHeader}>
+              <img
+                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FQR_code&psig=AOvVaw2ke1rTbUlPZaryCLZP-IZz&ust=1737432815728000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCO6eC3g4sDFQAAAAAdAAAAABAE"
+                alt="QR Code"
+                style={styles.qrCode}
+              />
               <div>
                 <h2 style={styles.heading}>Get the Which? app</h2>
                 <p style={styles.description}>
@@ -135,7 +140,12 @@ const Footer = () => {
               </div>
             </div>
 
-            <div style={styles.storeButtons}></div>
+            <div style={styles.storeButtons}>
+              <img
+                src="https://www.figma.com/community/resource/46e0b9fc-c8a4-476f-ac6e-e4a815e880fc/thumbnail"
+                alt="Get it on Google Play"
+              />
+            </div>
           </div>
           <div style={styles.problemSection}>
             <h2 style={styles.heading}>Got a problem?</h2>
