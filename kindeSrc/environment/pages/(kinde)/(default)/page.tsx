@@ -1,6 +1,10 @@
 "use server";
 
-import { getKindeWidget, type KindePageEvent } from "@kinde/infrastructure";
+import {
+  getKindeWidget,
+  getLogoUrl,
+  type KindePageEvent,
+} from "@kinde/infrastructure";
 import React from "react";
 // @ts-ignore
 import { renderToString } from "react-dom/server.browser";
@@ -54,7 +58,9 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
   return (
     <Layout context={context} request={request}>
       <div style={styles.container}>
-        <div style={styles.header}>Which</div>
+        <div style={styles.header}>
+          <img src={getLogoUrl()} alt="Which logo" width={110} height={25} />
+        </div>
         <main style={styles.loginForm}>
           <div style={{ padding: "2rem" }}>
             <h2 style={styles.heading}>{context.widget.content.heading}</h2>
