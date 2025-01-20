@@ -70,6 +70,18 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
             {getKindeWidget()}
           </div>
         </main>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            var fragment = document.createDocumentFragment();
+            fragment.appendChild(document.querySelector("[data-kinde-fallback-action]"));
+            document.querySelector('[data-kinde-form]').appendChild(fragment);
+
+            document.querySelector('[data-kinde-fallback-action-helper-text]').style.display = 'none';
+            document.querySelector('[data-kinde-text-button]').innerHTML = 'Forgot password?';
+            `,
+          }}
+        />
       </div>
     </Layout>
   );
