@@ -12,6 +12,7 @@ const kindeVariables = {
   buttonSecondaryBorderStyle: "none",
   buttonSecondaryBackgroundColor: "rgba(235,233,248,0.6)",
   buttonSecondaryBorderRadius: "99px",
+  fallbackActionTextAlign: "left",
 } as const;
 
 export const generateCSSVariables = (): string => `
@@ -27,11 +28,13 @@ export const generateCSSVariables = (): string => `
     --kinde-button-secondary-border-style: ${kindeVariables.buttonSecondaryBorderStyle};
     --kinde-button-secondary-border-radius: ${kindeVariables.buttonSecondaryBorderRadius};
     --kinde-button-secondary-color: ${kindeVariables.buttonSecondaryColor};
+    --kinde-fallback-action-text-align: ${kindeVariables.fallbackActionTextAlign};
   }
 
   [data-kinde-choice-separator] {
     text-transform: uppercase;
   }
+
 
   [data-kinde-control-label] {
     font-size: 1.125rem;
