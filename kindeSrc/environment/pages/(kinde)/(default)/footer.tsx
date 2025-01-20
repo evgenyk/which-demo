@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import React from "react";
 
 const Footer = () => {
@@ -6,6 +7,7 @@ const Footer = () => {
     container: React.CSSProperties;
     topSection: React.CSSProperties;
     appSection: React.CSSProperties;
+    appSectionHeader: React.CSSProperties;
     problemSection: React.CSSProperties;
     heading: React.CSSProperties;
     subHeading: React.CSSProperties;
@@ -41,12 +43,16 @@ const Footer = () => {
       flex: "1",
       minWidth: "300px",
     },
+    appSectionHeader: {
+      display: "flex",
+      gap: "1rem",
+    },
     problemSection: {
       flex: "1",
       minWidth: "300px",
     },
     heading: {
-      fontSize: "24px",
+      fontSize: "1.125rem",
       marginBottom: "16px",
       color: "#333",
       fontWeight: "bold",
@@ -119,27 +125,19 @@ const Footer = () => {
       <div style={styles.container}>
         <div style={styles.topSection}>
           <div style={styles.appSection}>
-            <h2 style={styles.heading}>Get the Which? app</h2>
-            <p style={styles.description}>
-              Get the power of Which? in your pocket by downloading our app,
-              giving you on-the-go access to our reviews
-            </p>
-            <img
-              src="/api/placeholder/150/150"
-              alt="QR Code"
-              style={styles.qrCode}
-            />
+            <div style={styles.appSectionHeader}>
+              <img src="/qrcode.png" alt="QR Code" style={styles.qrCode} />
+              <div>
+                <h2 style={styles.heading}>Get the Which? app</h2>
+                <p style={styles.description}>
+                  Get the power of Which? in your pocket by downloading our app,
+                  giving you on-the-go access to our reviews
+                </p>
+              </div>
+            </div>
+
             <div style={styles.storeButtons}>
-              <img
-                src="/api/placeholder/135/40"
-                alt="Get it on Google Play"
-                style={styles.storeButton}
-              />
-              <img
-                src="/api/placeholder/135/40"
-                alt="Download on the App Store"
-                style={styles.storeButton}
-              />
+              <img src="/getapp.png" alt="Get it on Google Play" />
             </div>
           </div>
           <div style={styles.problemSection}>
@@ -147,7 +145,7 @@ const Footer = () => {
             <p style={styles.description}>
               Chat to a live agent or send us a message
             </p>
-            <button style={styles.contactButton}>Contact us</button>
+            <Button variant="secondary">Contact us</Button>
           </div>
         </div>
 
