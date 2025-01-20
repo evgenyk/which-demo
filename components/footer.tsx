@@ -86,7 +86,7 @@ const Footer = () => {
       color: "#fff",
       padding: "12px 24px",
       border: "none",
-      borderRadius: "4px",
+      borderRadius: "99px",
       cursor: "pointer",
       fontSize: "16px",
     },
@@ -145,7 +145,7 @@ const Footer = () => {
             <p style={styles.description}>
               Chat to a live agent or send us a message
             </p>
-            <Button variant="secondary">Contact us</Button>
+            <button style={styles.contactButton}>Contact us</button>
           </div>
         </div>
 
