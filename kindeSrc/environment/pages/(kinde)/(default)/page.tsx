@@ -26,7 +26,7 @@ const styles: {
   },
   header: {
     borderBottom: "1px solid #ccc",
-    padding: "1rem",
+    padding: "2rem",
   },
   loginForm: {
     maxWidth: "630px",
