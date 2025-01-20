@@ -39,23 +39,11 @@ export const generateCSSVariables = (): string => `
   }
 
   [data-kinde-control-select-text] { 
-    height: 54px;
+    height: 44px;
   }
 
   [data-kinde-button] {
-    height: 42px;
+    height: 44px;
   }
 
-  .kinde-button-variant-primary .kinde-button-text{
-    font-weight: 600;
-    font-size: 18px;
-  }
-
-  [data-kinde-layout-widget] {
-    width: 360px;
-  }
-
-  [data-kinde-fallback-action] {
-    display: none;
-  }
 `;
