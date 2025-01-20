@@ -1,6 +1,7 @@
 "use server";
 
 import {
+  getKindeNonce,
   getKindeWidget,
   getLogoUrl,
   type KindePageEvent,
@@ -71,6 +72,7 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
           </div>
         </main>
         <script
+          nonce={getKindeNonce()}
           dangerouslySetInnerHTML={{
             __html: `
             var fragment = document.createDocumentFragment();
