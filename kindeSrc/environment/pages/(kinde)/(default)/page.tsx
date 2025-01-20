@@ -28,13 +28,10 @@ const styles: {
     padding: "1rem",
   },
   loginForm: {
-    flex: "1 0 auto",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-    maxWidth: "50%",
+    maxWidth: "630px",
+    margin: "auto",
+    width: "100%",
+    padding: "2rem",
   },
   heading: {
     fontWeight: "700",
