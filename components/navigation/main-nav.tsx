@@ -1,13 +1,20 @@
+"use server";
+
 // components/Navigation/MainNav.tsx
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { WhichLogo } from "../which-logo";
 import {
   LoginLink,
+  LogoutLink,
   RegisterLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
-const MainNav = () => {
+const MainNav = async () => {
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
+
   const navItems = [
     { label: "Tech", href: "/tech" },
     { label: "Appliances", href: "/appliances" },
@@ -28,14 +35,20 @@ const MainNav = () => {
             <WhichLogo />
           </Link>
 
-          <div className="flex items-center space-x-4">
-            <Button variant="outline">
-              <LoginLink>Log in</LoginLink>
-            </Button>
-            <Button>
-              <RegisterLink>Join</RegisterLink>
-            </Button>
-          </div>
+          {user ? (
+            <div className="flex gap-3">
+              <p>Logged in as {user.email}</p> <LogoutLink>Logout</LogoutLink>
+            </div>
+          ) : (
+            <div className="flex items-center space-x-4">
+              <LoginLink>
+                <Button variant="outline">Log in</Button>
+              </LoginLink>
+              <RegisterLink>
+                <Button>Join</Button>
+              </RegisterLink>
+            </div>
+          )}
         </div>
         <div className="hidden lg:flex space-x-8 container mx-auto px-4 pb-2">
           {navItems.map((item) => (
