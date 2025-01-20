@@ -3,15 +3,15 @@ const kindeVariables = {
   baseFontFamily:
     "-apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, Segoe UI, Roboto, sans-serif",
   controlSelectTextBorderRadius: "4px",
-  buttonPrimaryBackgroundColor: "#3E27B7",
+  buttonPrimaryBackgroundColor: "#0050B3",
   buttonPrimaryColor: "#fff",
-  buttonBorderRadius: "10px",
+  buttonBorderRadius: "99px",
   buttonSecondaryBorderWidth: "1px",
   buttonSecondaryBorderColor: "#e9edec",
   buttonSecondaryColor: "#3d1cba",
   buttonSecondaryBorderStyle: "none",
   buttonSecondaryBackgroundColor: "rgba(235,233,248,0.6)",
-  buttonSecondaryBorderRadius: "10px",
+  buttonSecondaryBorderRadius: "99px",
 } as const;
 
 export const generateCSSVariables = (): string => `
