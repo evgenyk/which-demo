@@ -10,6 +10,7 @@ import React from "react";
 // @ts-ignore
 import { renderToString } from "react-dom/server.browser";
 import Layout from "../../layout";
+import Footer from "./footer";
 
 const styles: {
   container: React.CSSProperties;
@@ -72,6 +73,7 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
           </div>
         </main>
       </div>
+      <Footer />
     </Layout>
   );
 };
