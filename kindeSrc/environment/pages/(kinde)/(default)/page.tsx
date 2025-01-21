@@ -58,6 +58,9 @@ const styles: {
 const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
   return (
     <Layout context={context} request={request}>
+      <script>
+        console.log('hello "bob"!');
+      </script>
       <div style={styles.container}>
         <div style={styles.header}>
           <img src={getLogoUrl()} alt="Which logo" width={110} height={25} />
