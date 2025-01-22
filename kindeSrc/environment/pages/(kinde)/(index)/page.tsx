@@ -8,7 +8,10 @@ export default async function handleRequest(event: any) {
         <body>
           <style>
             .something::before {
-              content: "";
+              content: "http://hello.world?aaa=bbb&ccc=ddd";
+            }
+            .something2::before {
+              content: 'http://hello.world?aaa=bbb&ccc=ddd';
             }
           </style>
           <p>Hello index</p>
